@@ -19,9 +19,9 @@ const Navbar: React.FC = () => {
     };
 
     return (
-        <nav className='navbar mb-16'>
+        <nav className='navbar mb-16 w-full fixed top-0 left-0'>
             <div className='container h-full flex items-center justify-between'>
-                <h1 className='logo'> kaarya. </h1>
+                <h1 className='logo font-extrabold'> kaarya. </h1>
                 <div className='flex items-center '>
                     <div className='m-10 text-right text-3xl leading-normal'>
                         <p className="day">{day}</p>

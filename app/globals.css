@@ -33,6 +33,18 @@ body {
 	background-color: var(--background);
 }
 
+hr{
+	border: none !important;
+	height: 1px;
+	background-color: var(--grey);
+}
+
+input,
+textarea {
+	background-color: var(--dark) !important;
+	color: var(--light);
+}
+
 :root {
 	--pending: #EC823A;
 	--completed: #46B281;
@@ -58,12 +70,13 @@ body {
 	font-size: 4rem;
 	color: var(--completed);
 	font-family: var(--font-poppins), sans-serif;
-	font-weight: 800;
 }
 
 .navbar {
+	background-color: var(--background);
 	height: 12rem;
 	border-bottom: 1px solid var(--grey);
+	z-index: 999 !important;
 }
 
 
@@ -108,6 +121,23 @@ body {
 
 /* ------------------------------Tasks------------------------------ */
 
-.tasks h2{
-	font-weight: 600;
+.tasks {
+	margin-bottom: 3rem;
+}
+
+
+/* ------------------------------Tiles------------------------------ */
+
+.tiles{
+	width: 30%;
+	height: 25rem;
+	background-color: var(--dark);
+}
+
+/* ------------------------------Addtask------------------------------ */
+
+.addTask {
+	background-color: var(--background);
+	border-left: 1px solid var(--grey);
+	width: 58vw;
 }

@@ -1,6 +1,7 @@
 "use client"
 
 import Tiles from "./components/Tiles";
+import AddTaskPopup from "./components/AddTaskPopup";
 
 import useTodosStore from "@/store/todo-store";
 
@@ -44,7 +45,7 @@ import useTodosStore from "@/store/todo-store";
 export default function Home() {
 	return (
 		<>
-			<section className="buttons container flex align-center justify-between">
+			<section className="buttons container flex align-center justify-between pt-64">
 				<div>
 					<button className="btn primary rounded-xl mr-6 px-12"> All Task</button>
 					<button className="btn pending rounded-xl mr-6 px-12"> Pending </button>
@@ -57,10 +58,18 @@ export default function Home() {
 					<span> Add Task </span>
 				</button>
 			</section>
+
 			<section className="tasks container">
-				<h2 className="text-4xl "> Today's Task </h2>
+				<h2 className="text-4xl mb-8 font-semibold"> Today's Task </h2>
 				<Tiles/>
 			</section>
+
+			<section className="tasks container">
+				<h2 className="text-4xl mb-8 font-semibold"> Upcoming Task </h2>
+				<Tiles/>
+			</section>
+
+			<AddTaskPopup />
 		</>
 	);
 }
