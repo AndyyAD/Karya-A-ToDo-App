@@ -2,6 +2,8 @@
 
 import Tiles from "./components/Tiles";
 import AddTaskPopup from "./components/AddTaskPopup";
+import EditTaskPopup from "./components/EditTaskPopup";
+import ViewTaskPopup from "./components/ViewTaskPopup";
 
 import useTodosStore from "@/store/todo-store";
 
@@ -69,7 +71,9 @@ export default function Home() {
 				<Tiles/>
 			</section>
 
-			<AddTaskPopup />
+			{/* <AddTaskPopup /> */}
+			{/* <EditTaskPopup /> */}
+			{/* <ViewTaskPopup /> */}
 		</>
 	);
 }
