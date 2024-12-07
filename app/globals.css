@@ -7,28 +7,107 @@
 *::after {
 	padding: 0;
 	margin: 0;
+	box-sizing: border-box;
 }
 
-html{
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+html {
+	font-size: 62.5%;
+	color: var(--light);
+	scroll-behavior: smooth;
 }
 
-ul, li{
-    list-style: none;
+ul,
+li {
+	list-style: none;
 }
 
-a{
-    height: inherit;
-    text-decoration: none;
+a {
+	height: inherit;
+	text-decoration: none;
 }
 
-body{
-    font-size: 1.6rem;
+body {
+	font-size: 1.6rem;
 	font-family: var(--font-geist-sans), sans-serif;
 	font-weight: 400;
+	background-color: var(--background);
 }
 
-/* :root{
-    
-} */
+:root {
+	--pending: #EC823A;
+	--completed: #46B281;
+	--primary: #51549E;
+	--dark: #1F1F1F;
+	--light: #FCFCFC;
+	--background: #101010;
+	--grey: #6E6E6E;
+	--red: #FF2D2D;
+}
+
+/* ------------------------------Containers------------------------------ */
+
+.container {
+	max-width: 1300px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+/* ------------------------------NavBar------------------------------ */
+
+.logo {
+	font-size: 4rem;
+	color: var(--completed);
+	font-family: var(--font-poppins), sans-serif;
+	font-weight: 800;
+}
+
+.navbar {
+	height: 12rem;
+	border-bottom: 1px solid var(--grey);
+}
+
+
+.date {
+	color: var(--completed);
+}
+
+.calendar {
+	background-color: var(--primary);
+}
+
+/* ------------------------------Button------------------------------ */
+
+.buttons{
+	margin-bottom: 4rem;;
+}
+
+.btn{
+	height: 4rem;
+	color: var(--light);
+}
+
+.btn:hover {
+	border: 2px solid var(--light);
+}
+
+.primary {
+	background-color: var(--primary);
+}
+
+.pending {
+	background-color: var(--pending);
+}
+
+.completed {
+	background-color: var(--completed);
+}
+
+.delete {
+	background-color: var(--red);
+}
+
+/* ------------------------------Tasks------------------------------ */
+
+.tasks h2{
+	font-weight: 600;
+}
