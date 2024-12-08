@@ -4,7 +4,11 @@ import React, { useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-const EditTaskPopup: React.FC = () => {
+interface EditTaskPopupProps {
+    handleEditTask: () => void;
+}
+
+const EditTaskPopup: React.FC<EditTaskPopupProps> = ({ handleEditTask }) => {
     const [title, setTitle] = useState<string>();
     const [description, setDescription] = useState<string>();
     const [startDate, setStartDate] = useState<Date | null>();
@@ -14,15 +18,17 @@ const EditTaskPopup: React.FC = () => {
         <div className="addTask h-screen fixed bottom-0 right-0 pt-64 px-20">
             <div className="flex justify-between align-center mb-12">
                 <h2 className="text-4xl font-semibold">Edit Task</h2>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="#e8eaed"
-                >
-                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                </svg>
+                <div onClick={handleEditTask}>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#e8eaed"
+                    >
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </div>
             </div>
             <hr />
             <form>

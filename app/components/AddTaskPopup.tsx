@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-const AddTaskPopup: React.FC = () => {
+interface AddTaskPopupProps {
+    handleAddTask: () => void;
+}
+
+const AddTaskPopup: React.FC<AddTaskPopupProps> = ({  handleAddTask }) => {
     const [startDate, setStartDate] = useState<Date | null>(null);
     const [title, setTitle] = useState<string>('');
     const [description, setDescription] = useState<string>('');
@@ -17,9 +21,11 @@ const AddTaskPopup: React.FC = () => {
     return (
         <>
             <div className='addTask h-screen fixed bottom-0 right-0 pt-64 px-20'>
-                <div className="flex justify-between align-center mb-12">
+                <div className="flex justify-between align-center mb-12" >
                     <h2 className='text-4xl font-semibold'>Add Task</h2>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                    <div onClick={handleAddTask}>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+                    </div>
                 </div>
                 <hr />
                 <form onSubmit={handleSubmit}>

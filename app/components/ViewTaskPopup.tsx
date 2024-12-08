@@ -1,19 +1,25 @@
 import React from 'react'
 
-const ViewTaskPopup = () => {
+interface ViewTaskPopupProps {
+    handleViewTask: () => void;
+}
+
+const ViewTaskPopup: React.FC<ViewTaskPopupProps> = ({ handleViewTask }) => {
     return (
         <div className="addTask h-screen fixed bottom-0 right-0 pt-64 px-20">
             <div className="flex justify-between align-center mb-12">
                 <h2 className="text-4xl font-semibold">Task 001</h2>
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    fill="#e8eaed"
-                >
-                    <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
-                </svg>
+                <div onClick={handleViewTask}>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 -960 960 960"
+                        width="24px"
+                        fill="#e8eaed"
+                    >
+                        <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </div>
             </div>
             <hr />
             <div>
